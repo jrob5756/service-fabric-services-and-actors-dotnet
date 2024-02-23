@@ -10,7 +10,7 @@ namespace Microsoft.ServiceFabric.Services.Runtime
     using System.Threading;
     using System.Threading.Tasks;
 
-    internal class RuntimeContext : IDisposable
+    internal class RuntimeContext : IRuntimeContext
     {
         private static readonly object SharedContextLock = new object();
         private static RuntimeContext sharedContext;

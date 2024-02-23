@@ -11,10 +11,10 @@ namespace Microsoft.ServiceFabric.Services.Runtime
     internal class StatelessServiceInstanceFactory : IStatelessServiceFactory, IDisposable
     {
         private readonly Func<StatelessServiceContext, StatelessService> serviceFactory;
-        private readonly RuntimeContext runtimeContext;
+        private readonly IRuntimeContext runtimeContext;
 
         public StatelessServiceInstanceFactory(
-            RuntimeContext runtimeContext,
+            IRuntimeContext runtimeContext,
             Func<StatelessServiceContext, StatelessService> serviceFactory)
         {
             this.runtimeContext = runtimeContext;
